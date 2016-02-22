@@ -8,11 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("TypeScript_Learn_App")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("
-			")]
+[assembly: AssemblyCompany("			")]
 [assembly: AssemblyProduct("TypeScript_Learn_App")]
-[assembly: AssemblyCopyright("Copyright © 
-			 2016")]
+[assembly: AssemblyCopyright("Copyright © 			 2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
