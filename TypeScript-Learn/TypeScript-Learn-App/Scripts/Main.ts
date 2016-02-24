@@ -2,13 +2,53 @@
 
 //module (container)
 module module1 {
+
     //Class
     class Greeter {
-        //Property
+
+        //Properties
         greeting: string;
+        bool1: boolean = true;
+        number1: number = 12.2;
+        number2: number; //==> not set then the default will be undefined
+        arr1: string[] = ['val1', 'val2', 'val3'];
+        func1: (argg: string) => string = function (argg) { return 'd' };
+
+        anim: any = null;
+        anim2 = null;
+        animSt: string = null;
+        orderDate: Date = null;
+        
+        //obj
+        obj1: Object = { name: 'sdf', age: 19 };
+        func3: Function = function () { return true; };
+        box1: { h: number, w?: number };//typed Object
+        
+
+        //obj contain function, and function call object property
+        obj2 = {
+            x: 10,
+            y: 20,
+            area: function () {
+                return this.x * this.y;
+            }
+        };
+
+        //function accept typed object
+        functObj = function (box: { h: number, w: number }) {
+            return box.h * box.w;
+        };
+
         //Constractor
         constructor(message: string) {
             this.greeting = message;
+            this.box1 = { h: 43 };
+            this.box1 = { h: 43, w: 45 };
+            //this.box1 = { hhh: 43 };//wrong
+
+            //this  is just var not class property
+            var nameSt: string = this.arr1[0];
+            this.func1('sdf');
         }
 
         //method
