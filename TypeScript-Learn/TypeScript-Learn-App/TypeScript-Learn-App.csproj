@@ -81,6 +81,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="Scripts\classes\ClassTwo.ts" />
+    <TypeScriptCompile Include="Scripts\classes\ClassOne.ts" />
     <TypeScriptCompile Include="Scripts\Main.ts" />
     <TypeScriptCompile Include="Scripts\typings\jquery\jquery.d.ts" />
   </ItemGroup>

@@ -2,6 +2,11 @@
 //module (container)
 var module1;
 (function (module1) {
+    var clsFromInterface = (function () {
+        function clsFromInterface() {
+        }
+        return clsFromInterface;
+    })();
     //Class
     var Greeter = (function () {
         //Constractor
@@ -17,6 +22,9 @@ var module1;
             //obj
             this.obj1 = { name: 'sdf', age: 19 };
             this.func3 = function () { return true; };
+            this.FuncFromInterface = function () {
+                return 2;
+            };
             //obj contain function, and function call object property
             this.obj2 = {
                 x: 10,
@@ -33,9 +41,12 @@ var module1;
             this.box1 = { h: 43 };
             this.box1 = { h: 43, w: 45 };
             //this.box1 = { hhh: 43 };//wrong
+            var ddd;
+            ddd["gf2"] = "5";
             //this  is just var not class property
             var nameSt = this.arr1[0];
             this.func1('sdf');
+            this.objFromInterface = { x: 1, title: 'sdf' };
         }
         //method
         Greeter.prototype.greet = function () {
@@ -48,6 +59,7 @@ var module1;
     var button = document.createElement('button');
     button.textContent = "Say Hello";
     button.onclick = function () {
+        greeter.FuncFromInterface(11, 22, "wer");
         alert(greeter.greet());
         $('#Div1').text('this is message from Jquery');
     };
